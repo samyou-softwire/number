@@ -1,12 +1,19 @@
-import { Grid } from '@mui/material'
-import NumberViewer from './NumberViewer'
+import { AppBar, Grid, Toolbar, Typography } from '@mui/material'
+import NumberList from './NumberList'
 
 export default function Layout() {
-    return <Grid container>
-    <Grid item xs={2}/>
-    <Grid item xs={8}>
-      <NumberViewer number={40}/>
-    </Grid>
-    <Grid item xs={2}/>
-  </Grid>
+    return <>
+        <AppBar position='static'>
+            <Toolbar>
+                <Typography>Number Facts Generator</Typography>
+            </Toolbar>
+        </AppBar>
+        <Grid container>
+            <Grid item xs={0} md={2}/>
+            <Grid item xs={12} md={8}>
+                <NumberList/>
+            </Grid>
+            <Grid item xs={0} md={8}/>
+        </Grid>
+    </>
 }
