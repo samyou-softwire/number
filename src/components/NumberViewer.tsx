@@ -1,19 +1,20 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
-import React, { useMemo } from "react";
+import React from "react";
 
-export type NumberViewerProps = {}
+export type NumberViewerProps = {
+    number: number
+}
 
-export default function NumberViewer(_props: React.PropsWithChildren<NumberViewerProps>) {
+export default function NumberViewer(props: React.PropsWithChildren<NumberViewerProps>) {
     const { data, error } = useQuery({
-        queryKey: ["repoData"],
-        async queryFn() {
-            const res = await fetch("http://numbersapi.com/40/trivia");
+        queryKey: ["numberFact", props.number],
+        async queryFn({ queryKey }) {
+            const [, number] = queryKey;
+            const res = await fetch(`http://numbersapi.com/${number}/trivia`);
             return await res.text()
         }
-    })
-
-
+    });
 
     if (error) return <Typography>oh no! {error.message}</Typography>
 
