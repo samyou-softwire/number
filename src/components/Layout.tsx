@@ -5,7 +5,7 @@ export default function Layout() {
     return <>
         <AppBar position='static'>
             <Toolbar>
-                <Typography>Number Facts Generator</Typography>
+                <Typography>Number Facts & Trivia Generator</Typography>
             </Toolbar>
         </AppBar>
         <Grid container>
