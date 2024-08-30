@@ -7,6 +7,6 @@ export default function NumberList() {
     return <List>
         {numbers.map(number => <ListItem>
             <NumberListItem number={number}/>
-        </ListItem>)};
+        </ListItem>)}
     </List>
 }
