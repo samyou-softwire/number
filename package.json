@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint",
     "preview": "vite preview",
-    "postinstall": "husky"
+    "postinstall": "husky",
+    "prettier:write": "yarn prettier src --write",
+    "prettier:check": "yarn prettier src --check"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
