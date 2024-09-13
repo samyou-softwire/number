@@ -14,7 +14,7 @@ export default function Layout() {
         <Grid item xs={12} md={8}>
           <NumberList />
         </Grid>
-        <Grid item xs={0} md={8} />
+        <Grid item xs={0} md={2} />
       </Grid>
     </>
   );
