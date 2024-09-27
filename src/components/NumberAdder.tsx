@@ -29,7 +29,7 @@ const NumberAdder = ({
           onChange={(e) => setNumber(parseInt(e.target.value))}
         />
       </FormControl>
-      <Button type="submit" onClick={onClickAdd}>
+      <Button type="submit" onClick={onClickAdd} id="add-button">
         Add
       </Button>
     </Box>

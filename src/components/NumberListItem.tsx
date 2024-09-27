@@ -57,11 +57,15 @@ export default function NumberListItem(props: NumberListItemProps) {
     <ListItem key={props.number}>
       <Grid container>
         <Grid item xs={7}>
-          <ListItemText primary={data} secondary={props.number.toString()} />
+          <ListItemText
+            primary={data}
+            secondary={props.number.toString()}
+            secondaryTypographyProps={{ id: `number-subtitle-${props.number}` }}
+          />
         </Grid>
         <Grid item xs={4}>
           <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <InputLabel id="demo-simple-select-label">Fact Type</InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
