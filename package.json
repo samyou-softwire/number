@@ -9,8 +9,8 @@
     "lint": "eslint",
     "preview": "vite preview",
     "postinstall": "husky",
-    "prettier:write": "yarn prettier src --write",
-    "prettier:check": "yarn prettier src --check",
+    "prettier:write": "yarn prettier src test --write",
+    "prettier:check": "yarn prettier src test --check",
     "test": "vitest run"
   },
   "dependencies": {
