@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "postinstall": "husky",
     "prettier:write": "yarn prettier src --write",
-    "prettier:check": "yarn prettier src --check"
+    "prettier:check": "yarn prettier src --check",
+    "test": "vitest"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
@@ -38,6 +39,7 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "husky": "^9.1.5",
+    "jsdom": "^25.0.0",
     "prettier": "3.3.3",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",

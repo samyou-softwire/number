@@ -56,10 +56,10 @@ export default function NumberListItem(props: NumberListItemProps) {
   return (
     <ListItem key={props.number}>
       <Grid container>
-        <Grid xs={7}>
+        <Grid item xs={7}>
           <ListItemText primary={data} secondary={props.number.toString()} />
         </Grid>
-        <Grid xs={4}>
+        <Grid item xs={4}>
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Age</InputLabel>
             <Select
@@ -76,7 +76,7 @@ export default function NumberListItem(props: NumberListItemProps) {
             </Select>
           </FormControl>
         </Grid>
-        <Grid xs={1}>
+        <Grid item xs={1}>
           <IconButton
             aria-label="comments"
             onClick={() => {
