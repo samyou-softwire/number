@@ -1,13 +1,15 @@
 import { List, ListItem } from "@mui/material";
 import NumberListItem from "./NumberListItem";
 
-export default function NumberList() {
-  const numbers = [44, 50, -295, 0, 13];
+export type NumberListProps = {
+  numbers: number[];
+};
 
+export default function NumberList({ numbers }: NumberListProps) {
   return (
     <List>
       {numbers.map((number) => (
-        <ListItem>
+        <ListItem key={number}>
           <NumberListItem number={number} />
         </ListItem>
       ))}
