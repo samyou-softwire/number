@@ -11,7 +11,8 @@
     "postinstall": "husky",
     "prettier:write": "yarn prettier src test --write",
     "prettier:check": "yarn prettier src test --check",
-    "test": "vitest run"
+    "test": "vitest run",
+    "cucumber": "cucumber-js"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
@@ -26,6 +27,7 @@
     "sass": "^1.77.8"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "^11.0.1",
     "@eslint/js": "^9.9.0",
     "@tanstack/eslint-plugin-query": "^5.52.0",
     "@testing-library/dom": "^10.4.0",
