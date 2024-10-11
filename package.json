@@ -2,17 +2,20 @@
   "name": "react",
   "private": true,
   "version": "0.0.0",
+  "homepage": ".",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc -b && vite build",
+    "build": "vite build --base /number/",
     "lint": "eslint",
     "preview": "vite preview",
     "postinstall": "husky",
     "prettier:write": "yarn prettier src test --write",
     "prettier:check": "yarn prettier src test --check",
     "test": "vitest run",
-    "cucumber": "cucumber-js"
+    "cucumber": "cucumber-js",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
@@ -40,6 +43,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
+    "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
     "husky": "^9.1.5",
     "jsdom": "^25.0.0",
